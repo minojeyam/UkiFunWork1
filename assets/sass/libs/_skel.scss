@@ -161,11 +161,11 @@
 
 // Mixins.
 
-	/// Sets the global box model.
-	/// @param {string} $model Model (default is content).
-	@mixin boxModel($model: 'content') {
+	/// Sets the global box city.
+	/// @param {string} $city city (default is content).
+	@mixin boxcity($city: 'content') {
 
-		$x: $model + '-box';
+		$x: $city + '-box';
 
 		*, *:before, *:after {
 			-moz-box-sizing: #{$x};
@@ -376,14 +376,14 @@
 
 			}
 
-		// Box model.
-			$x: map-get($config, 'boxModel');
+		// Box city.
+			$x: map-get($config, 'boxcity');
 
 			@if $x {
 
-				/* Box Model */
+				/* Box city */
 
-				@include boxModel($x);
+				@include boxcity($x);
 
 			}
 
